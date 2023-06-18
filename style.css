@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(87, 142, 230, 0.403);
+}
+
+#photo{
+    margin-top: 90px;
+    width: 500px ;
+    height: 500px;
+    border-radius: 25px;
+}
+
+#fetch-dog{
+    border-radius: 10px;
+    border: none;
+    background-color: orange;
+    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+}
+#fetch-dog:hover{
+    background-color: rgb(128, 89, 15)
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <img src="https://random.dog/7cc55332-05b7-4006-be2a-848226b3ef95.JPG" alt=""  id="photo">
+    <br>
+    <button id="fetch-dog">
+        random
+    </button>
+    </center>
+    <script>
+        document.querySelector('#fetch-dog').addEventListener('click', async () => {
+           refreshDog()
+        })
+              async function refreshDog() {
+            var fetchResult =  await fetch('https://random.dog/woof.json')
+            var data = await fetchResult.json()
+
+            if(data.url.includes('.mp4')) {
+                refreshDog()
+                return
+            }
+
+            document.getElementById('photo').src = data.url
+            }
+
+            refreshDog()
+    </script>
+</body>
+</html>
