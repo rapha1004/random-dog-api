@@ -1,4 +1,10 @@
+let dognumber = document.querySelector("#number")
+let number = 0
+
+
+
 document.querySelector('#fetch-dog').addEventListener('click', async () => {
+    addnumber()
     refreshDog()
  })
        async function refreshDog() {
@@ -9,8 +15,14 @@ document.querySelector('#fetch-dog').addEventListener('click', async () => {
          refreshDog()
          return
      }
-
+     
      document.getElementById('photo').src = data.url
      }
 
+
+    function addnumber() {
+        number += 1
+        dognumber.textContent = number
+    }
      refreshDog()
+    

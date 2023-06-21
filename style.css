@@ -15,7 +15,7 @@ body{
 
 #fetch-dog{
     border-radius: 10px;
-    border: none;
+    border: solid 2px;
     background-color: orange;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -27,4 +27,12 @@ body{
 #fetch-dog:hover{
     cursor: pointer;
     background-color: rgb(128, 89, 15)
+}
+
+#dognumber{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 760px;
 }
